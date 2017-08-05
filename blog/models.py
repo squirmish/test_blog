@@ -2,6 +2,9 @@ from django.db import models
 from django.utils import timezone
 
 class Post(models.Model):
+	"""
+	Django model that represents a blog post
+	"""
 	author = models.ForeignKey('auth.User')
 	title = models.CharField(max_length=200)
 	text = models.TextField()
